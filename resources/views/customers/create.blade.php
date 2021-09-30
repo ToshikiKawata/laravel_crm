@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
@@ -24,10 +25,9 @@
     <h1>新規登録画面</h1>
     <form action="{{ route('customers.store') }}" method="POST">
         @csrf
-        @method('POST')
         <div>
             <label for="name">名前</label>
-            <input type="text" name="name" id="name" value="{{ old('name') }}">
+            <input type="text" name="name" id="name" value="{{ old('name',) }}">
         </div>
         <div>
             <label for="email">メールアドレス</label>
@@ -50,6 +50,7 @@
         </div>
     </form>
     <button type="button" onclick="location.href='{{ route('customers.create') }}'">郵便番号検索に戻る</button>
+    <button type="button" onclick="location.href='{{ route('customers.index') }}'">一覧へ戻る</button>
 </body>
 
 </html>

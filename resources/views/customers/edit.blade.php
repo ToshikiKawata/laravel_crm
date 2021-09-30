@@ -36,7 +36,7 @@
         </div>
         <div>
             <label for="zipcode">郵便番号</label>
-            <input type="number" name="zipcode" value="{{ old('zipcode', $customer->zipcode) }}">
+            <input type="text" name="zipcode" value="{{ old('zipcode', $customer->zipcode) }}">
         </div>
         <div>
             <label for="address">住所</label>

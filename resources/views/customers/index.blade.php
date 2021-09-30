@@ -19,7 +19,7 @@
         </tr>
         @foreach ($customers as $customer)
             <tr>
-                <td>{{ $customer->number }}</td>
+                <td><a href="{{ route('customers.show', $customer) }}">{{ $customer->id }}</a></td>
                 <td>{{ $customer->name }}</td>
                 <td>{{ $customer->email }}</td>
                 <td>{{ $customer->zipcode }}</td>
@@ -28,6 +28,6 @@
             </tr>
         @endforeach
     </table>
-    <button type="button" onclick="location.href='{{ route('customers.create') }}'">新規作成</button>
+    <button type="button" onclick="location.href='{{ route('customers.search') }}'">新規作成</button>
 </body>
 </html>

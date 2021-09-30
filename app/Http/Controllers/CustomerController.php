@@ -28,12 +28,12 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function search()
     {
-        return view('customers.create');
+        return view('customers.search');
     }
 
-    public function search(Request $request, Customer $customer)
+    public function create(Request $request)
     {
         $method = 'GET';
         // create画面で入力した値をzipcodeに反映
@@ -56,7 +56,7 @@ class CustomerController extends Controller
             // フラッシュメッセージ
             return back()->withErrors(['error' => '郵便番号が正しくありません！']);
         }
-        return view('customers.search')->with(compact('customer', 'address', 'zipcode'));
+        return view('customers.create')->with(compact('address', 'zipcode'));
     }
 
     /**

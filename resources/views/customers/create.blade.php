@@ -49,7 +49,7 @@
             <input type="submit" value="登録">
         </div>
     </form>
-    <button type="button" onclick="location.href='{{ route('customers.create') }}'">郵便番号検索に戻る</button>
+    <button type="button" onclick="location.href='{{ route('customers.search') }}'">郵便番号検索に戻る</button>
     <button type="button" onclick="location.href='{{ route('customers.index') }}'">一覧へ戻る</button>
 </body>
 
